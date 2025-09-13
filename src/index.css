@@ -17,33 +17,34 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 20%;
 
-    --primary: 220 40% 15%;
-    --primary-foreground: 210 40% 98%;
+    /* Fashion-inspired color palette */
+    --primary: 340 75% 45%;          /* Rich rose for fashion and elegance */
+    --primary-foreground: 0 0% 98%;  /* Clean white text */
 
-    --secondary: 220 15% 95%;
-    --secondary-foreground: 220 15% 20%;
+    --secondary: 340 20% 95%;        /* Light rose-tinted background */
+    --secondary-foreground: 340 25% 10%; /* Dark rose-tinted text */
 
-    --muted: 220 15% 96%;
-    --muted-foreground: 220 10% 55%;
+    --muted: 340 15% 96%;
+    --muted-foreground: 340 10% 55%;
 
-    --accent: 200 100% 60%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 25 85% 60%;            /* Warm gold accent for luxury feel */
+    --accent-foreground: 25 30% 10%;    /* Dark gold text */
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 200 100% 60%;
+    --border: 340 13% 91%;
+    --input: 340 13% 91%;
+    --ring: 25 85% 60%;
 
     --radius: 0.75rem;
 
-    /* Portfolio-specific design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(220 40% 15%) 0%, hsl(220 35% 25%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(200 100% 60%) 0%, hsl(210 100% 70%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(220 40% 15%) 0%, hsl(200 100% 20%) 100%);
-    --shadow-elegant: 0 20px 40px -12px hsl(220 40% 15% / 0.25);
-    --shadow-card: 0 4px 20px -4px hsl(220 40% 15% / 0.1);
+    /* Fashion-specific design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(340 75% 45%) 0%, hsl(340 85% 55%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(25 85% 60%) 0%, hsl(25 90% 70%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(340 75% 45%) 0%, hsl(340 85% 55%) 50%, hsl(25 85% 60%) 100%);
+    --shadow-elegant: 0 20px 40px -12px hsl(340 75% 45% / 0.25);
+    --shadow-card: 0 4px 20px -4px hsl(340 75% 45% / 0.1);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;

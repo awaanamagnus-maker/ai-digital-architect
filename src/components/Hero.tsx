@@ -1,64 +1,62 @@
-import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-image.jpg";
+import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
-      {/* Background Image Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
+    <section className="min-h-screen bg-gradient-hero flex items-center justify-center relative overflow-hidden">
+      <div className="absolute inset-0 bg-black/30"></div>
       
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Turning AI & Digital Marketing Into 
-            <span className="bg-gradient-accent bg-clip-text text-transparent"> Real Business Growth</span>
+      <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="max-w-5xl mx-auto">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
+            Beauty Empress<br />
+            <span className="bg-gradient-accent bg-clip-text text-transparent">
+              Collections & Fashion Hub
+            </span>
           </h1>
           
-          <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
-            I help tech startups and digital agencies harness the power of AI tools, modern web technologies, 
-            and data-driven marketing to solve real business challenges, scale faster, and generate measurable impact.
+          <p className="text-xl md:text-2xl text-white/90 mb-4 max-w-4xl mx-auto leading-relaxed">
+            Your one-stop fashion destination where tradition meets modern style
+          </p>
+          
+          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-3xl mx-auto">
+            From casual to corporate, woven to western, we dress you with confidence — delivered nationwide across Ghana.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
-              size="lg" 
-              variant="secondary"
-              className="px-8 py-4 text-lg font-semibold shadow-elegant hover:shadow-card transition-all duration-300 hover:-translate-y-1"
+              size="lg"
+              className="px-8 py-4 text-lg font-semibold bg-white text-primary hover:bg-white/90 transition-all duration-300 hover:-translate-y-1 shadow-elegant"
             >
-              View My Work
+              Shop Now
             </Button>
             <Button 
               size="lg" 
-              className="px-8 py-4 text-lg font-semibold bg-gradient-accent hover:opacity-90 transition-all duration-300 hover:-translate-y-1 shadow-elegant"
+              variant="outline"
+              className="px-8 py-4 text-lg font-semibold border-white text-white hover:bg-white hover:text-primary transition-all duration-300 hover:-translate-y-1"
             >
-              Let's Work Together
+              Custom Tailoring
             </Button>
+          </div>
+          
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-white">🚚</div>
+              <p className="text-white/80 text-sm mt-2">Nationwide Delivery</p>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-white">✂️</div>
+              <p className="text-white/80 text-sm mt-2">Custom Tailoring</p>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-white">👗</div>
+              <p className="text-white/80 text-sm mt-2">Traditional & Modern</p>
+            </div>
           </div>
         </div>
       </div>
       
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-primary-foreground/60">
-        <div className="animate-bounce">
-          <svg 
-            className="w-6 h-6" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24"
-          >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M19 14l-7 7m0 0l-7-7m7 7V3" 
-            />
-          </svg>
-        </div>
-      </div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
     </section>
   );
 };

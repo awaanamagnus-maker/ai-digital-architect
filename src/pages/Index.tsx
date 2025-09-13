@@ -40,7 +40,10 @@ const Index = () => {
       <footer className="bg-primary text-primary-foreground py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm opacity-80">
-            © 2024 Magnus W. Awaana. All rights reserved. | Built with passion for innovation and impact.
+            © 2024 Beauty Empress Collections & Fashion Hub. All rights reserved. 
+          </p>
+          <p className="text-xs opacity-70 mt-2">
+            Your premier fashion destination in Lawra, Upper West Region | Nationwide delivery available
           </p>
         </div>
       </footer>

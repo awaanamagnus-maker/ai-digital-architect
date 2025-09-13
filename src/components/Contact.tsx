@@ -4,17 +4,24 @@ import { Card } from "@/components/ui/card";
 const Contact = () => {
   const contactInfo = [
     {
-      icon: "📧",
-      label: "Email",
-      value: "awaanam@gmail.com",
-      href: "mailto:awaanam@gmail.com"
+      icon: "📍",
+      label: "Location",
+      value: "Lawra, Upper West Region",
+      href: "#location"
     },
     {
       icon: "📞",
       label: "Phone",
-      value: "+233 553979045",
-      href: "tel:+233553979045"
+      value: "0203690701",
+      href: "tel:0203690701"
     }
+  ];
+
+  const services = [
+    { icon: "🚚", title: "Nationwide Delivery", desc: "We deliver anywhere in Ghana" },
+    { icon: "✂️", title: "Custom Tailoring", desc: "Bespoke clothing made to fit" },
+    { icon: "👗", title: "Fashion Retail", desc: "Modern & traditional styles" },
+    { icon: "💎", title: "Premium Quality", desc: "Authentic fabrics & materials" }
   ];
 
   return (
@@ -22,31 +29,45 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
-            Let's Build Something Great Together
+            Visit Our Fashion Hub
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to collaborate on your next project? Whether you need AI-powered solutions, 
-            a modern website, or a marketing strategy that delivers, I'd love to help.
+            Ready to transform your style? Visit us in Lawra or contact us for nationwide delivery. 
+            From everyday fashion to special occasion wear, we've got you covered.
           </p>
         </div>
         
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {services.map((service, index) => (
+              <Card 
+                key={index}
+                className="p-6 text-center hover:shadow-card transition-all duration-300 hover:-translate-y-1 bg-card border-0 shadow-sm"
+              >
+                <div className="text-3xl mb-3">{service.icon}</div>
+                <h3 className="text-lg font-semibold mb-2 text-primary">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground text-sm">
+                  {service.desc}
+                </p>
+              </Card>
+            ))}
+          </div>
+
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {contactInfo.map((contact, index) => (
               <Card 
                 key={index}
-                className="p-6 text-center hover:shadow-card transition-all duration-300 hover:-translate-y-1 bg-card border-0 shadow-sm"
+                className="p-8 text-center hover:shadow-card transition-all duration-300 hover:-translate-y-1 bg-card border-0 shadow-sm"
               >
                 <div className="text-4xl mb-4">{contact.icon}</div>
                 <h3 className="text-xl font-semibold mb-2 text-primary">
                   {contact.label}
                 </h3>
-                <a 
-                  href={contact.href}
-                  className="text-accent hover:text-accent/80 transition-colors font-medium"
-                >
+                <p className="text-accent font-medium text-lg">
                   {contact.value}
-                </a>
+                </p>
               </Card>
             ))}
           </div>
@@ -57,21 +78,31 @@ const Contact = () => {
                 size="lg"
                 className="px-8 py-4 text-lg font-semibold bg-gradient-accent hover:opacity-90 transition-all duration-300 hover:-translate-y-1 shadow-elegant"
               >
-                Start a Conversation
+                🛍️ Shop Now
               </Button>
               <Button 
                 size="lg" 
                 variant="outline"
                 className="px-8 py-4 text-lg font-semibold border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-1"
               >
-                📄 Download My Resume
+                ✂️ Custom Tailoring
               </Button>
             </div>
             
             <div className="pt-8 border-t border-border">
-              <p className="text-sm text-muted-foreground italic max-w-2xl mx-auto">
-                "I help startups and agencies unlock growth through AI-powered solutions, modern web development, 
-                and data-driven marketing — turning complex challenges into measurable business results."
+              <h3 className="text-xl font-bold text-primary mb-4">Business Hours</h3>
+              <div className="grid md:grid-cols-2 gap-4 max-w-md mx-auto text-sm">
+                <div>
+                  <p className="font-semibold text-foreground">Monday - Friday</p>
+                  <p className="text-muted-foreground">8:00 AM - 6:00 PM</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Saturday</p>
+                  <p className="text-muted-foreground">9:00 AM - 5:00 PM</p>
+                </div>
+              </div>
+              <p className="text-muted-foreground mt-4 italic">
+                Sunday: Closed (Available for urgent custom orders by appointment)
               </p>
             </div>
           </div>

@@ -23,8 +23,9 @@ const Navigation = () => {
   const navItems = [
     { label: "Home", id: "hero" },
     { label: "About", id: "about" },
-    { label: "Skills", id: "skills" },
-    { label: "Projects", id: "projects" },
+    { label: "Services", id: "skills" },
+    { label: "Market", id: "projects" },
+    { label: "Reviews", id: "testimonials" },
     { label: "Contact", id: "contact" }
   ];
 
@@ -39,18 +40,18 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div 
-            className="font-bold text-xl cursor-pointer text-primary hover:text-accent transition-colors"
+            className="font-bold text-lg md:text-xl cursor-pointer text-primary hover:text-accent transition-colors"
             onClick={() => scrollToSection("hero")}
           >
-            Magnus W. Awaana
+            Beauty Empress Collections
           </div>
           
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-accent transition-colors font-medium"
+                className="text-foreground hover:text-accent transition-colors font-medium text-sm"
               >
                 {item.label}
               </button>
@@ -62,7 +63,7 @@ const Navigation = () => {
             className="bg-gradient-accent hover:opacity-90 transition-all duration-300"
             onClick={() => scrollToSection("contact")}
           >
-            Get In Touch
+            Shop Now
           </Button>
         </div>
       </div>
