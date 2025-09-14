@@ -1,3 +1,5 @@
+import aboutImage from "@/assets/about-fashion-store.jpg";
+
 const About = () => {
   return (
     <section className="py-20 bg-secondary/10">
@@ -45,13 +47,19 @@ const About = () => {
             </div>
             
             <div className="relative">
-              <div className="aspect-square bg-gradient-primary rounded-2xl p-8 flex items-center justify-center shadow-elegant">
-                <div className="text-center text-white">
-                  <div className="text-6xl mb-4">👗</div>
-                  <h3 className="text-2xl font-bold mb-2">Style & Tradition</h3>
-                  <p className="text-white/80">
-                    Where traditional Ghanaian craftsmanship meets contemporary fashion trends.
-                  </p>
+              <div className="aspect-square rounded-2xl overflow-hidden shadow-elegant">
+                <img 
+                  src={aboutImage} 
+                  alt="Beauty Empress Collections fashion store interior with traditional and modern clothing"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-primary/20 flex items-end">
+                  <div className="p-6 text-white">
+                    <h3 className="text-2xl font-bold mb-2">Style & Tradition</h3>
+                    <p className="text-white/90">
+                      Where traditional Ghanaian craftsmanship meets contemporary fashion trends.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
