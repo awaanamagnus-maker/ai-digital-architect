@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,12 +23,13 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { label: "Home", id: "hero" },
-    { label: "About", id: "about" },
-    { label: "Services", id: "skills" },
-    { label: "Market", id: "projects" },
-    { label: "Reviews", id: "testimonials" },
-    { label: "Contact", id: "contact" }
+    { label: "Home", id: "hero", isHome: true },
+    { label: "About", id: "about", isHome: true },
+    { label: "Services", id: "skills", isHome: true },
+    { label: "Tailoring", id: "tailoring", route: "/tailoring" },
+    { label: "Market", id: "projects", isHome: true },
+    { label: "Reviews", id: "testimonials", isHome: true },
+    { label: "Contact", id: "contact", isHome: true }
   ];
 
   return (
@@ -48,13 +51,29 @@ const Navigation = () => {
           
           <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-foreground hover:text-accent transition-colors font-medium text-sm"
-              >
-                {item.label}
-              </button>
+              item.route ? (
+                <Link
+                  key={item.id}
+                  to={item.route}
+                  className="text-foreground hover:text-accent transition-colors font-medium text-sm"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <button
+                  key={item.id}
+                  onClick={() => {
+                    if (location.pathname !== '/') {
+                      window.location.href = '/#' + item.id;
+                    } else {
+                      scrollToSection(item.id);
+                    }
+                  }}
+                  className="text-foreground hover:text-accent transition-colors font-medium text-sm"
+                >
+                  {item.label}
+                </button>
+              )
             ))}
           </div>
           
