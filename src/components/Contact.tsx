@@ -11,9 +11,27 @@ const Contact = () => {
     },
     {
       icon: "📞",
-      label: "Phone",
-      value: "0203690701",
-      href: "tel:0203690701"
+      label: "Call",
+      value: "0205953646",
+      href: "tel:0205953646"
+    },
+    {
+      icon: "💬",
+      label: "WhatsApp",
+      value: "+233 59 205 3745",
+      href: "https://wa.me/233592053745"
+    },
+    {
+      icon: "📧",
+      label: "Email",
+      value: "joycepuoviel@gmail.com",
+      href: "mailto:joycepuoviel@gmail.com"
+    },
+    {
+      icon: "📱",
+      label: "Facebook",
+      value: "Beauty Empress Collection's and Fashion Hub",
+      href: "https://facebook.com"
     }
   ];
 
