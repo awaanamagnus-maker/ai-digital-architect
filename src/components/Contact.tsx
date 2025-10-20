@@ -30,7 +30,7 @@ const Contact = () => {
     {
       icon: "📱",
       label: "Facebook",
-      value: "Beauty Empress Collection's and Fashion Hub",
+      value: "Beeuty Empress Collection's and Fashion Hub",
       href: "https://facebook.com"
     }
   ];
