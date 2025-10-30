@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import CartSheet from "@/components/CartSheet";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,6 +25,7 @@ const Navigation = () => {
 
   const navItems = [
     { label: "Home", id: "hero", isHome: true },
+    { label: "Shop", id: "shop", route: "/shop" },
     { label: "About", id: "about", isHome: true },
     { label: "Services", id: "skills", isHome: true },
     { label: "Tailoring", id: "tailoring", route: "/tailoring" },
@@ -77,13 +79,17 @@ const Navigation = () => {
             ))}
           </div>
           
-          <Button 
-            size="sm"
-            className="bg-gradient-accent hover:opacity-90 transition-all duration-300"
-            onClick={() => scrollToSection("contact")}
-          >
-            Shop Now
-          </Button>
+          <div className="flex items-center gap-3">
+            <CartSheet />
+            
+            <Button 
+              size="sm"
+              className="bg-gradient-accent hover:opacity-90 transition-all duration-300 hidden md:inline-flex"
+              onClick={() => scrollToSection("contact")}
+            >
+              Shop Now
+            </Button>
+          </div>
         </div>
       </div>
     </nav>

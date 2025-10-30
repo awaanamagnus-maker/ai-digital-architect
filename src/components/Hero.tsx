@@ -24,19 +24,23 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg"
-              className="px-8 py-4 text-lg font-semibold bg-white text-primary hover:bg-white/90 transition-all duration-300 hover:-translate-y-1 shadow-elegant"
-            >
-              Shop Now
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="px-8 py-4 text-lg font-semibold border-white text-white hover:bg-white hover:text-primary transition-all duration-300 hover:-translate-y-1"
-            >
-              Custom Tailoring
-            </Button>
+            <a href="/shop">
+              <Button 
+                size="lg"
+                className="px-8 py-4 text-lg font-semibold bg-white text-primary hover:bg-white/90 transition-all duration-300 hover:-translate-y-1 shadow-elegant"
+              >
+                Shop Now
+              </Button>
+            </a>
+            <a href="/tailoring">
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="px-8 py-4 text-lg font-semibold border-white text-white hover:bg-white hover:text-primary transition-all duration-300 hover:-translate-y-1"
+              >
+                Custom Tailoring
+              </Button>
+            </a>
           </div>
           
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
