@@ -90,12 +90,24 @@ const CartSheet = () => {
                   <span className="text-primary">₵{cartTotal.toFixed(2)}</span>
                 </div>
                 
-                <Button className="w-full" size="lg">
+                <Button 
+                  className="w-full" 
+                  size="lg"
+                  onClick={() => {
+                    const orderDetails = cart.map(item => 
+                      `${item.name} (${item.category}) - Qty: ${item.quantity} - ₵${(item.price * item.quantity).toFixed(2)}`
+                    ).join('\n');
+                    
+                    const message = `Hello! I'd like to place an order:\n\n${orderDetails}\n\nTotal: ₵${cartTotal.toFixed(2)}`;
+                    const whatsappUrl = `https://wa.me/233592053745?text=${encodeURIComponent(message)}`;
+                    window.open(whatsappUrl, '_blank');
+                  }}
+                >
                   Proceed to Checkout
                 </Button>
                 
                 <p className="text-xs text-center text-muted-foreground">
-                  Contact us via WhatsApp or phone to complete your order
+                  Complete your order via WhatsApp
                 </p>
               </div>
             </>
