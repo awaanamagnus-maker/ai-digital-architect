@@ -23,20 +23,20 @@ const Hero = () => {
             From casual to corporate, woven to western, we dress you with confidence — delivered nationwide across Ghana.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="/shop">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full max-w-md sm:max-w-none mx-auto">
+            <a href="/shop" className="w-full sm:w-auto">
               <Button 
                 size="lg"
-                className="px-8 py-4 text-lg font-semibold bg-white text-primary hover:bg-white/90 transition-all duration-300 hover:-translate-y-1 shadow-elegant"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold bg-white text-primary hover:bg-white/90 transition-all duration-300 hover:-translate-y-1 shadow-elegant"
               >
                 Shop Now
               </Button>
             </a>
-            <a href="/tailoring">
+            <a href="/tailoring" className="w-full sm:w-auto">
               <Button 
                 size="lg" 
                 variant="outline"
-                className="px-8 py-4 text-lg font-semibold border-white text-white hover:bg-white hover:text-primary transition-all duration-300 hover:-translate-y-1"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold border-white text-white hover:bg-white hover:text-primary transition-all duration-300 hover:-translate-y-1"
               >
                 Custom Tailoring
               </Button>
