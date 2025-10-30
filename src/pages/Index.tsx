@@ -5,6 +5,10 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
+import ProductCard from "@/components/ProductCard";
+import { products } from "@/data/products";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const Index = () => {
   return (
@@ -26,6 +30,32 @@ const Index = () => {
         
         <section id="projects">
           <Projects />
+        </section>
+        
+        <section id="products" className="py-20 bg-background">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4 text-foreground">Featured Products</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                Discover our curated collection of fashion items, accessories, and traditional fabrics
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              {products.slice(0, 8).map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+            
+            <div className="text-center">
+              <Button asChild size="lg" className="gap-2">
+                <a href="/shop">
+                  View All Products
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </Button>
+            </div>
+          </div>
         </section>
         
         <section id="testimonials">

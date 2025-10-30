@@ -1,84 +1,9 @@
 import Navigation from "@/components/Navigation";
 import ProductCard from "@/components/ProductCard";
 import Contact from "@/components/Contact";
-import { Product } from "@/contexts/CartContext";
-import { Button } from "@/components/ui/button";
-import sneakersImg from "@/assets/products/sneakers.jpg";
-import handbagImg from "@/assets/products/handbag.jpg";
-import smartwatchImg from "@/assets/products/smartwatch.jpg";
-import watchImg from "@/assets/products/watch.jpg";
-import traditionalFabricImg from "@/assets/products/traditional-fabric.jpg";
-import heelsImg from "@/assets/products/heels.jpg";
-import nightwearImg from "@/assets/products/nightwear.jpg";
-import crossbodyBagImg from "@/assets/products/crossbody-bag.jpg";
+import { products } from "@/data/products";
 
 const Shop = () => {
-  const products: Product[] = [
-    {
-      id: "1",
-      name: "Urban Sport Sneakers",
-      price: 250.00,
-      image: sneakersImg,
-      category: "Footwear",
-      isNew: true,
-    },
-    {
-      id: "2",
-      name: "Luxury Leather Handbag",
-      price: 450.00,
-      image: handbagImg,
-      category: "Bags",
-      isNew: true,
-    },
-    {
-      id: "3",
-      name: "Smart Fitness Watch",
-      price: 350.00,
-      image: smartwatchImg,
-      category: "Accessories",
-      isNew: false,
-    },
-    {
-      id: "4",
-      name: "Classic Chronograph Watch",
-      price: 550.00,
-      image: watchImg,
-      category: "Accessories",
-      isNew: false,
-    },
-    {
-      id: "5",
-      name: "Traditional Kente Fabric",
-      price: 180.00,
-      image: traditionalFabricImg,
-      category: "Traditional",
-      isNew: true,
-    },
-    {
-      id: "6",
-      name: "Elegant High Heels",
-      price: 200.00,
-      image: heelsImg,
-      category: "Footwear",
-      isNew: false,
-    },
-    {
-      id: "7",
-      name: "Luxury Nightwear",
-      price: 150.00,
-      image: nightwearImg,
-      category: "Clothing",
-      isNew: false,
-    },
-    {
-      id: "8",
-      name: "Designer Crossbody Bag",
-      price: 320.00,
-      image: crossbodyBagImg,
-      category: "Bags",
-      isNew: true,
-    },
-  ];
 
   return (
     <div className="min-h-screen bg-background">
