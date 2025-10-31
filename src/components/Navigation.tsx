@@ -2,10 +2,13 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import CartSheet from "@/components/CartSheet";
+import { useAuth } from "@/contexts/AuthContext";
+import { User, LogIn } from "lucide-react";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const { user } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -82,9 +85,33 @@ const Navigation = () => {
           <div className="flex items-center gap-3">
             <CartSheet />
             
+            {user ? (
+              <Link to="/profile">
+                <Button 
+                  size="sm"
+                  variant="ghost"
+                  className="gap-2"
+                >
+                  <User className="h-4 w-4" />
+                  <span className="hidden md:inline">Profile</span>
+                </Button>
+              </Link>
+            ) : (
+              <Link to="/auth">
+                <Button 
+                  size="sm"
+                  variant="ghost"
+                  className="gap-2"
+                >
+                  <LogIn className="h-4 w-4" />
+                  <span className="hidden md:inline">Sign In</span>
+                </Button>
+              </Link>
+            )}
+            
             <Button 
               size="sm"
-              className="bg-gradient-accent hover:opacity-90 transition-all duration-300 hidden md:inline-flex"
+              className="bg-gradient-accent hover:opacity-90 transition-all duration-300 hidden lg:inline-flex"
               onClick={() => scrollToSection("contact")}
             >
               Shop Now
